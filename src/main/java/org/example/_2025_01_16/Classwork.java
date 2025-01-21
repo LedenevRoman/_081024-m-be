@@ -1,5 +1,7 @@
 package org.example._2025_01_16;
 
+import java.util.Arrays;
+
 public class Classwork {
     public static void main(String[] args) {
         int a = 0; //локальная переменная метода main
