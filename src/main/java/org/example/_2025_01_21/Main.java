@@ -50,4 +50,12 @@ public class Main {
         badAccount.setBalance(badAccount.getBalance() - amount);
         badAccount.setHold(badAccount.getHold() + amount);
     }
+
+    public void print(Object object) {
+        System.out.println(object);
+    }
+
+    public void print(int[] ints) {
+        System.out.println(ints);
+    }
 }
