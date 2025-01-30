@@ -22,6 +22,7 @@ public class Cat extends Animal implements MouseCatcher {
             // System.out.println(String.format("Dog %s barks. Cat %s runs away", another.getName(), getName()));
             // System.out.printf("Dog %s barks. Cat %s runs away%n", another.getName(), getName());
             System.out.println("Dog " + another.getName() + " barks. Cat " + getName() + " runs away");
+            ((Dog) another).bark();
         } else {
             super.play(another);
         }
