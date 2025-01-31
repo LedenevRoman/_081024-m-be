@@ -1,17 +1,20 @@
 package org.example.middle_earth_battle;
 
 public class Orc extends Hero {
-    private double powerMultiplier;
-    private int maxHealth;
+    private final int maxHealth;
 
-    public Orc(String name, int health, int power, int armor, double powerMultiplier, int maxHealth) {
+    public Orc(String name, int health, int power, int armor) {
         super(name, health, power, armor);
-        this.powerMultiplier = powerMultiplier;
-        this.maxHealth = maxHealth;
+        this.maxHealth = health;
     }
 
     @Override
     public int getPower() {
-        return (int) ((maxHealth - super.getHealth()) / maxHealth * powerMultiplier * super.getPower());
+        return (int) ((1 - (double) (super.getHealth()) / maxHealth) + 1) * super.getPower();
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Orc %s with %d health", getName(), getHealth());
     }
 }

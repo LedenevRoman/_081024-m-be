@@ -28,6 +28,9 @@ public class Main {
         } catch (ArithmeticException exception) {
             /*exception.printStackTrace();*/
             System.out.println("Exception divide by zero");
+            throw new RuntimeException();
+        } finally {
+            System.out.println("I am finally");
         }
         fileNotFoundException();
         /*stackOverflowError(0);*/
