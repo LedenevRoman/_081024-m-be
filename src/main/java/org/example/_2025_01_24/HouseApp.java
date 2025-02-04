@@ -52,12 +52,13 @@ public class HouseApp {
         Dog dog3 = new Dog("Rex", 8, "cocker spaniel");
         Mouse mouse = new Mouse("Stuart Little", 5);
         Human human = new Human("Roman", 32);
-        Robot robot = new Robot("R2D2");
+        Object robot = new Robot("R2D2");
 
-        Creature[] creatures = {cat1, dog1, mouse, human, robot};
-        AnimalWalker[] animalWalkers = {human, robot};
+        MouseCatcher robotCatcher = (MouseCatcher) robot;
+        Creature[] creatures = {cat1, dog1, mouse, human, (Creature) robot};
+        AnimalWalker[] animalWalkers = {human, (AnimalWalker) robot};
         Animal[] houseAnimals = {cat1, dog1, cat2, dog2, dog3};
-        MouseCatcher[] mouseCatchers = {robot, cat1};
+        MouseCatcher[] mouseCatchers = {(MouseCatcher) robot, cat1};
         Animated[] animateds = {cat1, dog1, cat2, dog2, dog3, human, mouse};
 
         human.feed(cat1, dog1, mouse);

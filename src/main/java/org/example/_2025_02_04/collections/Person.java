@@ -2,7 +2,7 @@ package org.example._2025_02_04.collections;
 
 import java.util.Objects;
 
-public class Person {
+public class Person implements Comparable {
     private String firstName;
     private String lastName;
     private int age;
@@ -17,6 +17,10 @@ public class Person {
         this.age = age;
     }
 
+    public int getAge() {
+        return age;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -28,5 +32,20 @@ public class Person {
     @Override
     public int hashCode() {
         return Objects.hash(firstName, lastName, age);
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", age=" + age +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Person that = (Person) o;
+        return this.lastName.compareTo(that.lastName);
     }
 }

@@ -31,8 +31,14 @@ public class Main {
 
         Animal animal1 = new Cat("Бостон");
         Animal animal2 = new Dog("Рич");
+        Animal animal3 = new Animal() {
+            @Override
+            public void voice() {
+                System.out.println("...");
+            }
+        };
 
-        Animal[] animals = {new Cat("Мурзик"), new Dog("Соня")};
+        Animal[] animals = {new Cat("Мурзик"), new Dog("Соня"), animal3};
 
         for (int i = 0; i < animals.length; i++) {
             animals[i].voice();
