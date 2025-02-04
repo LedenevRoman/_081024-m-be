@@ -1,4 +1,4 @@
-package org.example.middle_earth_battle;
+package org.example._2025_01_31.middle_earth_battle;
 
 import java.util.Arrays;
 

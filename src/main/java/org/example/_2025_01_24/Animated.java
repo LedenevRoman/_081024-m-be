@@ -8,6 +8,10 @@ public abstract class Animated extends Creature {
         this.age = age;
     }
 
+    public int getAge() {
+        return age;
+    }
+
     public void grow() {
         System.out.println(getName() + " grows from " + age + " to " + ++age);
     }

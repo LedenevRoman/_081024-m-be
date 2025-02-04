@@ -1,6 +1,6 @@
 package org.example._2025_01_24;
 
-public class Cat extends Animal implements MouseCatcher {
+public class Cat extends Animal implements MouseCatcher, Comparable {
     private String color;
 
     public Cat(String name, int age, String color) {
@@ -31,5 +31,24 @@ public class Cat extends Animal implements MouseCatcher {
     @Override
     public void catchMouse(Mouse mouse) {
         System.out.println(getName() + " catches mouse " + mouse.getName());
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Cat that = (Cat) o;
+        return this.getAge() - that.getAge();
+    }
+
+    @Override
+    public String toString() {
+        return "Cat{" +
+                "name='" + getName() + '\'' +
+                ", age=" + getAge() +
+                ", color='" + color + '\'' +
+                '}';
     }
 }

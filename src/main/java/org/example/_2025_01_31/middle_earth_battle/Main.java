@@ -1,4 +1,4 @@
-package org.example.middle_earth_battle;
+package org.example._2025_01_31.middle_earth_battle;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,7 +11,7 @@ public class Main {
         Hero urukhai2 = new Orc("Urukhai2", 90, 70, 9);
         Hero warg1 = new Warg("Warg1", 70, 55, 6, 5);
         Hero warg2 = new Warg("Warg2", 80, 50, 7, 4);
-        Hero witchKing = new Nazgul("Witch-King of Angmar", 150, 90, 18, 20);
+        Hero witchKing = new Nazgul("Witch-King of Angmar", 150, 90, 12, 20);
 
 
 
@@ -21,8 +21,8 @@ public class Main {
         System.out.println("Армия 1: " + army1);
         System.out.println("Армия 2: " + army2);
 
-        Battle.myFight(army1, army2);
-/*        Battle.classworkFight(army1, army2);*/
+/*        Battle.myFight(army1, army2);*/
+        Battle.classworkFight(army1, army2);
     }
 
 }
