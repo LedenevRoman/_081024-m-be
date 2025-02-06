@@ -1,5 +1,8 @@
 package org.example._2025_01_31.middle_earth_battle;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -14,15 +17,20 @@ public class Main {
         Hero witchKing = new Nazgul("Witch-King of Angmar", 150, 90, 12, 20);
 
 
+/*
+        ArmyArray armyArray1 = new ArmyArray(new Hero[]{aragorn, legolas, gimli});
+        ArmyArray armyArray2 = new ArmyArray(new Hero[]{witchKing, urukhai1, warg1, urukhai2, warg2});
 
-        Army army1 = new Army(new Hero[]{aragorn, legolas, gimli});
-        Army army2 = new Army(new Hero[]{witchKing, urukhai1, warg1, urukhai2, warg2});
+        System.out.println("Армия 1: " + armyArray1);
+        System.out.println("Армия 2: " + armyArray2);
 
-        System.out.println("Армия 1: " + army1);
-        System.out.println("Армия 2: " + army2);
+*//*        Battle.myFight(army1, army2);*//*
+        Battle.classworkFight(armyArray1, armyArray2);*/
 
-/*        Battle.myFight(army1, army2);*/
-        Battle.classworkFight(army1, army2);
+        ArmyList middleEarthDefendors = new ArmyList(new ArrayList<>(List.of(aragorn, legolas, gimli)));
+        ArmyList mordorForces = new ArmyList(new ArrayList<>(List.of(witchKing, urukhai1, warg1, urukhai2, warg2)));
+
+        Battle.classworkFightList(middleEarthDefendors, mordorForces);
     }
 
 }

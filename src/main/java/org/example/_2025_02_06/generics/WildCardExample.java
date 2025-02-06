@@ -11,12 +11,13 @@ public class WildCardExample {
         Dog[] dogsArr = {new Dog(), new Dog()};
         testArray(dogsArr);
 
+        Object[] objectsArr = dogsArr;
+
         List<Animal> animalsList = new ArrayList<>(List.of(new Animal(), new Animal()));
         List<Dog> dogsList = new ArrayList<>(List.of(new Dog(), new Dog()));
-        List<Object> objects = new ArrayList<>(List.of(new Object(), new Object()));
+        List<Object> objectList = new ArrayList<>(List.of(new Object(), new Object()));
 
-        testList(dogsList);
-        testList(animalsList);
+        ArrayList<String> strings = new ArrayList<>();
     }
 
     public static void testArray(Animal[] animals) {
@@ -25,9 +26,15 @@ public class WildCardExample {
         }
     }
 
-    public static void testList(List<? extends Animal> objects) {
-        for (Object object : objects) {
-            System.out.println(object);
+    public static void testListAnimal(List<? extends Animal> animals) {
+        for (Animal animal : animals) {
+            System.out.println(animal);
+        }
+    }
+
+    public static void testListDog(List<Dog> animals) {
+        for (Animal animal : animals) {
+            System.out.println(animal);
         }
     }
 }

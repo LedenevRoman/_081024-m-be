@@ -2,11 +2,11 @@ package org.example._2025_01_31.middle_earth_battle;
 
 import java.util.Arrays;
 
-class Army {
+class ArmyArray {
     private final Hero[] heroes;
     private Integer indexOfAlive = 0;
 
-    public Army(Hero[] heroes) {
+    public ArmyArray(Hero[] heroes) {
         this.heroes = heroes;
     }
 
@@ -24,12 +24,12 @@ class Army {
         return false;
     }
 
-    public void attack(Army armyEnemies) {
+    public void attack(ArmyArray armyArrayEnemies) {
         for (Hero hero : heroes) {
             if (!hero.isAlive()) {
                 continue;
             }
-            Hero enemy = armyEnemies.getNextAlive();
+            Hero enemy = armyArrayEnemies.getNextAlive();
             if (enemy != null) {
                 hero.attack(enemy);
             }

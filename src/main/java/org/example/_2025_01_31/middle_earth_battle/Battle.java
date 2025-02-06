@@ -4,20 +4,20 @@ import java.util.Random;
 
 class Battle {
     private static final Random RANDOM = new Random();
-    public static void myFight(Army army1, Army army2) {
+    public static void myFight(ArmyArray armyArray1, ArmyArray armyArray2) {
         System.out.println("Начинается битва!");
 
         int index1 = 0;
         int index2 = 0;
-        while (army1.isAlive() && army2.isAlive()) {
-            if (index1 == army1.getHeroes().length) {
+        while (armyArray1.isAlive() && armyArray2.isAlive()) {
+            if (index1 == armyArray1.getHeroes().length) {
                 index1 = 0;
             }
-            if (index2 == army2.getHeroes().length) {
+            if (index2 == armyArray2.getHeroes().length) {
                 index2 = 0;
             }
-            Hero hero1 = army1.getHeroes()[index1];
-            Hero hero2 = army2.getHeroes()[index2];
+            Hero hero1 = armyArray1.getHeroes()[index1];
+            Hero hero2 = armyArray2.getHeroes()[index2];
             if (!hero1.isAlive()) {
                 index1++;
                 continue;
@@ -40,10 +40,32 @@ class Battle {
             index1++;
             index2++;
         }
-        printResult(army1, army2);
+        printResult(armyArray1, armyArray2);
     }
 
-    public static void classworkFight(Army army1, Army army2) {
+    public static void classworkFight(ArmyArray armyArray1, ArmyArray armyArray2) {
+        while (armyArray1.isAlive() && armyArray2.isAlive()) {
+            System.out.println("Army " + armyArray1 + " attacks");
+            armyArray1.attack(armyArray2);
+
+            System.out.println("Army " + armyArray2 + " attacks");
+            armyArray2.attack(armyArray1);
+        }
+        printResult(armyArray1, armyArray2);
+    }
+
+    private static void printResult(ArmyArray armyArray1, ArmyArray armyArray2) {
+        System.out.println("Битва завершена!");
+        if (armyArray1.isAlive()) {
+            System.out.println("Победила армия 1!" + armyArray1);
+        } else if (armyArray2.isAlive()) {
+            System.out.println("Победила армия 2!" + armyArray2);
+        } else {
+            System.out.println("Ничья!");
+        }
+    }
+
+    public static void classworkFightList(ArmyList army1, ArmyList army2) {
         while (army1.isAlive() && army2.isAlive()) {
             System.out.println("Army " + army1 + " attacks");
             army1.attack(army2);
@@ -54,12 +76,12 @@ class Battle {
         printResult(army1, army2);
     }
 
-    private static void printResult(Army army1, Army army2) {
+    private static void printResult(ArmyList armyArray1, ArmyList armyArray2) {
         System.out.println("Битва завершена!");
-        if (army1.isAlive()) {
-            System.out.println("Победила армия 1!" + army1);
-        } else if (army2.isAlive()) {
-            System.out.println("Победила армия 2!" + army2);
+        if (armyArray1.isAlive()) {
+            System.out.println("Победила армия 1!" + armyArray1);
+        } else if (armyArray2.isAlive()) {
+            System.out.println("Победила армия 2!" + armyArray2);
         } else {
             System.out.println("Ничья!");
         }
