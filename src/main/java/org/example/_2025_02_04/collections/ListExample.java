@@ -1,9 +1,6 @@
 package org.example._2025_02_04.collections;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class ListExample {
     public static void main(String[] args) {
@@ -21,6 +18,7 @@ public class ListExample {
         list.add(7);
         list.add(new Person("1", "2", 3));
 
+/*
         System.out.println(list);
 
         list.remove(7);
@@ -46,13 +44,21 @@ public class ListExample {
         for (Object o : list) {
             System.out.println(o);
         }
+*/
+        list.add(0);
+        Iterator iterator = list.iterator(); // позиция -1
 
-        Iterator iterator = list.iterator();
-
+        ListIterator listIterator = list.listIterator();
 
         while (iterator.hasNext()) {
-            System.out.println(iterator.next());
+            if (iterator.next().equals(Integer.valueOf(2))) {
+                iterator.remove();
+            }
         }
+
+        System.out.println(list);
+
+
 
 
         ///////////////////////////////////////////

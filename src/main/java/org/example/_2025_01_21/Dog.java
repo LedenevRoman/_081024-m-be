@@ -3,6 +3,9 @@ package org.example._2025_01_21;
 public class Dog extends Animal implements MyInterface, MyInterface2 {
     private int age;
 
+    public Dog() {
+    }
+
     public Dog(String name, int age) {
         super(name);
         this.age = age;
