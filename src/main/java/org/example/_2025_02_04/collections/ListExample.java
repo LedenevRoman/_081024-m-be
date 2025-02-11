@@ -6,6 +6,7 @@ public class ListExample {
     public static void main(String[] args) {
         /*ArrayList list1 = new ArrayList();*/
         List list = new ArrayList();
+
         list.add(0);
         list.add(1);
         list.add(2);

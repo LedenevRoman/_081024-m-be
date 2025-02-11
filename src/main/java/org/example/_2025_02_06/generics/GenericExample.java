@@ -40,12 +40,11 @@ public class GenericExample {
             animals3.get(i).voice();
         }
 
-
-
-        List<Animal> animals = List.of(new Animal(), new Animal()); //Не изменяемый лист
+        List<Animal> unmodifiableList = List.of(new Animal(), new Animal()); //Не изменяемый лист
 /*        animals.add(new Animal());*/
 
         List<Animal> modifiableList = new ArrayList<>(List.of(new Animal(), new Animal()));
         modifiableList.add(new Animal());
+
     }
 }

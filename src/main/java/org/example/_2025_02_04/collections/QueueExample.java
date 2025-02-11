@@ -1,9 +1,7 @@
 package org.example._2025_02_04.collections;
 
 import java.time.LocalDateTime;
-import java.util.Comparator;
-import java.util.PriorityQueue;
-import java.util.Queue;
+import java.util.*;
 
 public class QueueExample {
     public static void main(String[] args) {
@@ -23,7 +21,7 @@ public class QueueExample {
             }
         };
 
-        Queue queue = new PriorityQueue(patientComparator);
+        Queue queue = new PriorityQueue();
         queue.add(patient1);
         queue.add(patient2);
         queue.add(patient3);
@@ -33,26 +31,20 @@ public class QueueExample {
 
         System.out.println(queue);
 
-        System.out.println(queue.poll());
-        System.out.println(queue.poll());
-        System.out.println(queue.poll());
-        System.out.println(queue.poll());
-        System.out.println(queue.poll());
-        System.out.println(queue.poll());
-        System.out.println(queue.poll());
-        System.out.println(queue.poll());
-        System.out.println(queue.poll());
-        System.out.println(queue.poll());
-        System.out.println(queue.poll());
+        PriorityQueue priorityQueue = (PriorityQueue) queue;
 
-/*        System.out.println(queue.poll());
         System.out.println(queue.poll());
         System.out.println(queue.poll());
         System.out.println(queue.poll());
         System.out.println(queue.poll());
-        System.out.println(queue.poll());*/
+        System.out.println(queue.poll());
+        System.out.println(queue.poll());
 
         System.out.println(queue);
 
+        List<String> names = new ArrayList<>(List.of("Mary", "Jane", "Tom", "Tim", "Mark", "Ann", ""));
+        names.add(null);
+
+        System.out.println(names);
     }
 }
