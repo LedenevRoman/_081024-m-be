@@ -44,5 +44,9 @@ public class Main {
         myLinkedList.add(3);
 
         System.out.println(myLinkedList);
+
+        for (Object object : myArrayList) {
+            System.out.println(object);
+        }
     }
 }
