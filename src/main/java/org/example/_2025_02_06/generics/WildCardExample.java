@@ -8,6 +8,7 @@ public class WildCardExample {
         Animal[] animalsArr = {new Animal(), new Animal()};
         testArray(animalsArr);
 
+
         Dog[] dogsArr = {new Dog(), new Dog()};
         testArray(dogsArr);
 
@@ -18,6 +19,8 @@ public class WildCardExample {
         List<Object> objectList = new ArrayList<>(List.of(new Object(), new Object()));
 
         ArrayList<String> strings = new ArrayList<>();
+
+        testListAnimal(dogsList);
     }
 
     public static void testArray(Animal[] animals) {

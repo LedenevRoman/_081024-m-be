@@ -31,8 +31,6 @@ public class QueueExample {
 
         System.out.println(queue);
 
-        PriorityQueue priorityQueue = (PriorityQueue) queue;
-
         System.out.println(queue.poll());
         System.out.println(queue.poll());
         System.out.println(queue.poll());

@@ -1,10 +1,13 @@
 package org.example._2025_02_11;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) {
 /*        System.out.println(10 >> 1); // 1010 -> 0101 4+1 = 5*/
+
+        System.out.println(Objects.equals(null, null));
 
         MyArrayList myArrayList = new MyArrayList(12);
         System.out.println(myArrayList);
