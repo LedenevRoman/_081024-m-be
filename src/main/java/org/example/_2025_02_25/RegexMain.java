@@ -35,10 +35,27 @@ public class RegexMain {
             System.out.println("Совпадение на индексе " + matcher.start() + " - " + matcher.end() + " : " + matcher.group());
         }
 
+        System.out.println(string1.replace("лимонный", "яблочный"));
+
+
+
 /*        String s = "Егор Алла Александра";
 
         System.out.println(s.matches("[А-Яа-я\\s]+"));
         String[] strings = s.split("\\.");
         System.out.println(Arrays.toString(strings));*/
+
+        String words = "word word word word word";
+        StringBuilder sb = new StringBuilder(words);
+
+        Pattern pattern1 = Pattern.compile("word");
+        Matcher matcher1 = pattern1.matcher(sb);
+        int pointer = 0;
+        while (matcher1.find(pointer)) {
+            sb.replace(matcher1.start(), matcher1.end(), "letter");
+            pointer = matcher1.end() - 1;
+        }
+
+        System.out.println(sb);
     }
 }
