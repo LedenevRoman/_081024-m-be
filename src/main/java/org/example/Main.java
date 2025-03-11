@@ -3,8 +3,15 @@ package org.example;
 import org.example._2025_01_14.Student;
 import org.example._2025_01_16.Car;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.LinkedList;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InvocationTargetException, IllegalAccessException {
         int a = 7;
         int b = 7;
         System.out.println(a == b);
@@ -26,7 +33,7 @@ public class Main {
         string2 = string2.intern();
         System.out.println(string1 == string2);
 
-        int[] arr = {0,1,2,3,4,5,6,7,8};
+        int[] arr = {0, 1, 2, 3, 4, 5, 6, 7, 8};
         for (int i = 0; i < arr.length; i++) {
             if (i % 2 == 0) {
                 break;
@@ -37,7 +44,14 @@ public class Main {
         System.out.println("end");
 
         Car car1 = new Car("BMW", "x5", 1999);
-/*        car1.model = "BMC";*/
+        /*        car1.model = "BMC";*/
+
+
+        System.out.println("asdfasdfфывафёёёфвыфаqweradsf".replaceAll("[а-яё]", ""));
+
+        System.out.println((int) 'ё');
+        System.out.println((int) 'а');
+        System.out.println((int) 'я');
     }
 
     public static String print(String string) {

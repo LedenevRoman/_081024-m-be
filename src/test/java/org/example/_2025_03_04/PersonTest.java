@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PersonTest {
 
-    private static final Person person = new Person("SomeName");
+    private Person person = new Person("SomeName");
 
     @Test
     void grow() {
