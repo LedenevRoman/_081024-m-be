@@ -47,14 +47,6 @@ public enum Country {
         return currency;
     }
 
-    public String getCurrency(Integer i) {
-        return currency;
-    }
-
-    public String getCurrency(int i) {
-        return currency;
-    }
-
     public void setCurrency(String currency) {
         if (!hasCurrency()) {
             this.currency = currency;
