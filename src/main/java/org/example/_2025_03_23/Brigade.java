@@ -58,8 +58,6 @@ public class Brigade {
         Map<Skill, Integer> result = new EnumMap<>(Skill.class);
         for (Skill skill : combination) {
             result.merge(skill, 1, (oldValue, newValue) -> oldValue + 1);
-            result.putIfAbsent(skill, 1);
-            result.put(skill, result.get(skill) + 1);
         }
         return result;
     }
