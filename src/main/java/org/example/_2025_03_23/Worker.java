@@ -1,18 +1,22 @@
 package org.example._2025_03_23;
 
-import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 public class Worker {
     private final String id;
-    private final List<Skill> skills;
+    private final Set<Skill> skills;
 
-    public Worker(String id, List<Skill> skills) {
+    public Worker(String id, Set<Skill> skills) {
         this.id = id;
         this.skills = skills;
     }
 
-    public List<Skill> getSkills() {
+    public boolean canTake(Skill profession) {
+        return skills.contains(profession);
+    }
+
+    public Set<Skill> getSkills() {
         return skills;
     }
 
@@ -34,10 +38,6 @@ public class Worker {
                 "id='" + id + '\'' +
                 ", skills=" + skills +
                 '}';
-    }
-
-    public boolean canTake(Skill profession) {
-        return skills.contains(profession);
     }
 }
 
