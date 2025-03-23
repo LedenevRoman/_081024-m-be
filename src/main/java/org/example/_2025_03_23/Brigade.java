@@ -24,16 +24,16 @@ public class Brigade {
         return result;
     }
 
-    private void fillInResultSet(int index, List<Skill> current, Set<List<Skill>> result) {
-        if (current.size() == workers.size()) {
-            result.add(new ArrayList<>(current));
+    private void fillInResultSet(int workerIndex, List<Skill> currentCombination, Set<List<Skill>> result) {
+        if (workerIndex == workers.size()) {
+            result.add(new ArrayList<>(currentCombination));
             return;
         }
-        Worker worker = workers.get(index);
+        Worker worker = workers.get(workerIndex);
         for (Skill skill : worker.getSkills()) {
-            current.add(skill);
-            fillInResultSet(index + 1, current, result);
-            current.removeLast();
+            currentCombination.add(skill);
+            fillInResultSet(workerIndex + 1, currentCombination, result);
+            currentCombination.removeLast();
         }
     }
 
