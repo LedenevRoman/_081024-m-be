@@ -1,4 +1,4 @@
-package org.example._2025_03_17;
+package org.example._2025_03_23;
 
 public enum Skill {
     PLOTNIK,
